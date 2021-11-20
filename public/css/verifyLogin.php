@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-$servername = "local_host";
+$servername = "localhost";
 $username = "root";
-$password = "Meow!123";
+$password = "";
 $db = "med_base";
 
 // Create connection
