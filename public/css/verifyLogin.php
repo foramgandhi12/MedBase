@@ -33,7 +33,7 @@ else {
             echo '<script type="text/javascript">alert("' . $msg . '")</script>';
         }
         else{
-            header("Location: Login.html");
+            header("Location: dashboard.php");
         }
     }
 }
