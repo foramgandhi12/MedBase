@@ -7,14 +7,14 @@ $password = "";
 $db = "med_base";
 
 // Create connection
-$database = new mysqli_connect($servername, $username, $password, $db);
+$database = mysqli_connect($servername, $username, $password, $db);
 
 //check connection
 if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     exit();
 }
-retrive the values from the form
+//retrieve the values from the form
 else {    
     //check if the form is submitted
     if (isset($_POST["submit"])){
