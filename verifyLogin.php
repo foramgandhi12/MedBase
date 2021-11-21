@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); 
 
 $servername = "localhost";
 $username = "root";
@@ -23,6 +23,8 @@ else {
         $password_form = mysqli_real_escape_string($database, $_POST["password"]);
         $position_form = mysqli_real_escape_string($database, $_POST["position"]);
 
+        
+
         //perform query 
         $query = "SELECT * FROM employee WHERE employeeName = '$username_form' AND employeePassword = '$password_form' AND roleID = '$position_form'";
         $result = mysqli_query($database, $query);
@@ -34,8 +36,18 @@ else {
             header("Location: Login.html");
         }
         else{
-            header("Location: dashboard.php?user=".$position_form);
+            ob_start();
+            session_start();
+            $emp_info = $_REQUEST['emp_info'];
+            $_SESSION['emp_info'] = mysqli_fetch_row($result);
+            header("Location: dashboard.php");
         }
+    } else if (isset($_POST['admin'])){
+        echo "admin login";
+        // if($username_form = "Admin" && $password_form="Admin"){
+        //     header("Location: Admin.php");
+        //     exit();
+        // }
     }
 }
 ?>
