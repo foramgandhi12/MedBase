@@ -28,23 +28,19 @@ else {
         echo $position_form;
 
         //perform query 
-        $query = "SELECT * FROM medbase.employee";
-
-        // $query = "SELECT * FROM medbase.employee WHERE employeeName = $username_form AND employeePassword = $password_form AND roleID = $position_form";
+        $query = "SELECT * FROM .employee WHERE employeeName = '$username_form' AND employeePassword = '$password_form' AND roleID = '$position_form'";
         $result = mysqli_query($database, $query);
 
-        echo "\nThe result is ".mysqli_fetch_row($result);
-
-        // //check to see if login was valid
-        // if(!$result){
-        //     // header("Location: Login.html");
-        //     $msg = "Invalid login! Please re-enter your credentials.";
-        //     echo '<script type="text/javascript">alert("' . $msg . '")</script>';
-        // }
-        // else{
-        //     echo "entered dashboard";
-        //     // header("Location: /dashboard.php");
-        // }
+        //check to see if login was valid
+        if(!$result){
+            // header("Location: Login.html");
+            $msg = "Invalid login! Please re-enter your credentials.";
+            echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+        }
+        else{
+            // echo "entered dashboard";
+            header("Location: dashboard.php");
+        }
     }
 }
 ?>
