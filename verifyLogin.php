@@ -23,10 +23,6 @@ else {
         $password_form = mysqli_real_escape_string($database, $_POST["password"]);
         $position_form = mysqli_real_escape_string($database, $_POST["position"]);
 
-        echo $username_form;
-        echo $password_form;
-        echo $position_form;
-
         //perform query 
         $query = "SELECT * FROM employee WHERE employeeName = '$username_form' AND employeePassword = '$password_form' AND roleID = '$position_form'";
         $result = mysqli_query($database, $query);
