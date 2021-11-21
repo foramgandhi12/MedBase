@@ -28,18 +28,17 @@ else {
         echo $position_form;
 
         //perform query 
-        $query = "SELECT * FROM .employee WHERE employeeName = '$username_form' AND employeePassword = '$password_form' AND roleID = '$position_form'";
+        $query = "SELECT * FROM employee WHERE employeeName = '$username_form' AND employeePassword = '$password_form' AND roleID = '$position_form'";
         $result = mysqli_query($database, $query);
-
+        
         //check to see if login was valid
-        if(!$result){
-            // header("Location: Login.html");
+        if(mysqli_num_rows($result) == 0){
             $msg = "Invalid login! Please re-enter your credentials.";
             echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+            header("Location: Login.html");
         }
         else{
-            // echo "entered dashboard";
-            header("Location: dashboard.php");
+            header("Location: dashboard.php?user=".$position_form);
         }
     }
 }
