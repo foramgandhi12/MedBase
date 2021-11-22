@@ -18,6 +18,15 @@
   <script>
     document.getElementById('datePicker').value = new Date().toDateInputValue();
   </script>
+  <style>
+    #submit-form{
+        background-color: #6a5eb5;
+        border: none;
+    }
+    #submit-form:hover{
+        background-color: #52498c;
+    }
+  </style>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -92,9 +101,9 @@
         </section>
         <br><br>            
         <div class = "row" style="margin-left: 0; margin-right: 0;">
-            <div class="col-md-6" style="max-width: 50%;">
+            <div class="col-md-6" style="max-width: 50%; height: 10%;">
             <!-- Widget: user widget style 1 -->
-                <div class="card card-widget widget-user shadow">
+                <div class="card card-widget widget-user shadow" style="margin-left: 8px">
                     <!-- Add the bg color to the header using any of the bg-* classes -->
                     <div class="widget-user-header bg-info">
                         <h3 class="widget-user-username"><?php echo $empName ?></h3>
@@ -103,7 +112,7 @@
                     <div class="widget-user-image">
                         <img class="img-circle elevation-2" src=<?php echo $imgLink ?> alt="User Avatar">
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer" style="height: 149px">
                         <div class="row">
                         <div class="col-sm-4 border-right">
                             <div class="description-block">
@@ -143,7 +152,7 @@
             <!--Widget for employee clock-in/clock-out-->
             <div class = "col md-6" style="max-width: 50%;">
                 <!-- Input addon -->
-                <div class="card card-info">
+                <div class="card card-info" style="margin-bottom: 15%; margin-right: 8px">
                 <div class="card-header"style="background-color: #6a5eb5;">
                     <h3 class="card-title">Time Card</h3>
                 </div>
@@ -162,22 +171,10 @@
                     </div>
                     </div>
 
-                    <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">$</span>
-                    </div>
-                    <input type="text" class="form-control">
-                    <div class="input-group-append">
-                        <span class="input-group-text">.00</span>
-                    </div>
-                    </div>
-
                     <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"></span>
-                    </div>
                     <input type="date" class="form-control" value="" id="datePicker">
                     </div>
+                    <a href="#" id="submit-form" class="btn btn-primary">Submit</a>
                 </div>
                 <!-- /.card-body -->
                 </div>
