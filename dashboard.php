@@ -14,7 +14,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <?php include "element.php"; ?> 
   <?php include "employee.php"; ?> 
-  <?php include "setupDatabaseConnection.php"; ?> 
+  <?php include "setupDatabaseConnection.php"; ?>
+  <script>
+    document.getElementById('datePicker').value = new Date().toDateInputValue();
+  </script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -57,11 +60,11 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
                 <!-- Add icons to the links using the .nav-icon class
                     with font-awesome or any other icon font library -->
-                <li class="nav-item menu-open">
-                    <?php sidebar_element("Label 1"); ?>
-                    <?php sidebar_element("Label 2"); ?>
-                    <?php sidebar_element("Label 3"); ?>
-                    <?php sidebar_element("Label 4"); ?>
+                <li class="nav-item menu-open" id="sidebar_elements">
+                    <!-- <?php sidebar_element("Label 1", "#"); ?>
+                    <?php sidebar_element("Label 2", "#"); ?>
+                    <?php sidebar_element("Label 3", "#"); ?>
+                    <?php sidebar_element("Label 4", "#"); ?> -->
                 </li>
             </ul>
             </nav>
@@ -81,58 +84,102 @@
         </div>
         <section class="content">
             <div class="container-fluid">
-                <!-- Small boxes (Stat box) -->
-                <div class="row">
-                    <?php add_widgets();?>
+                <!-- Widget div -->
+                <div class="row" id="widget_row">
+                    <?php //add_widgets('150', '#', 'Bounce Rate', '53%', '#', 'calendar-check', 'User Registrations', '44', '#', 'person-add', 'Unique Visitors', '65', '#', 'pie-graph');?>
                 </div>
             </div>
         </section>
+        <br><br>            
+        <div class = "row" style="margin-left: 0; margin-right: 0;">
+            <div class="col-md-6" style="max-width: 50%;">
+            <!-- Widget: user widget style 1 -->
+                <div class="card card-widget widget-user shadow">
+                    <!-- Add the bg color to the header using any of the bg-* classes -->
+                    <div class="widget-user-header bg-info">
+                        <h3 class="widget-user-username"><?php echo $empName ?></h3>
+                        <h5 class="widget-user-desc"><?php echo $empPosition ?></h5>
+                    </div>
+                    <div class="widget-user-image">
+                        <img class="img-circle elevation-2" src=<?php echo $imgLink ?> alt="User Avatar">
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                        <div class="col-sm-4 border-right">
+                            <div class="description-block">
+                            <h5 class="description-header"><?php echo $empAddress ?></h5>
+                            <span class="description-text">ADDRESS</span>
+                            </div>
+                            <!-- /.description-block -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-4 border-right">
+                            <div class="description-block">
+                            <?php 
+                                $database = setupConnection();
+                                //perform query 
+                                $query = "SELECT departmentName FROM departments WHERE departmentID = '$empDepartment'";
+                                $result = mysqli_query($database, $query);
+                            ?>
+                            <h5 class="description-header"><?php echo mysqli_fetch_row($result)[0] ?></h5>
+                            <span class="description-text">DEPARTMENT</span>
+                            </div>
+                            <!-- /.description-block -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-4">
+                            <div class="description-block">
+                            <h5 class="description-header"><?php echo $empPhoneNo ?></h5>
+                            <span class="description-text">PHONE NUMBER</span>
+                            </div>
+                            <!-- /.description-block -->
+                        </div>
+                        <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                </div>
+            </div>
+            <!--Widget for employee clock-in/clock-out-->
+            <div class = "col md-6" style="max-width: 50%;">
+                <!-- Input addon -->
+                <div class="card card-info">
+                <div class="card-header"style="background-color: #6a5eb5;">
+                    <h3 class="card-title">Time Card</h3>
+                </div>
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">#</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Employee Number">
+                    </div>
 
-        <div class="col-md-4" style="max-width: 50%;">
-        <!-- Widget: user widget style 1 -->
-            <div class="card card-widget widget-user shadow">
-                <!-- Add the bg color to the header using any of the bg-* classes -->
-                <div class="widget-user-header bg-info">
-                    <h3 class="widget-user-username"><?php echo $empName ?></h3>
-                    <h5 class="widget-user-desc"><?php echo $empPosition ?></h5>
+                    <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Hours Worked">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                    </div>
+
+                    <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="text" class="form-control">
+                    <div class="input-group-append">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                    </div>
+
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"></span>
+                    </div>
+                    <input type="date" class="form-control" value="" id="datePicker">
+                    </div>
                 </div>
-                <div class="widget-user-image">
-                    <img class="img-circle elevation-2" src=<?php echo $imgLink ?> alt="User Avatar">
-                </div>
-                <div class="card-footer">
-                    <div class="row">
-                    <div class="col-sm-4 border-right">
-                        <div class="description-block">
-                        <h5 class="description-header"><?php echo $empAddress ?></h5>
-                        <span class="description-text">ADDRESS</span>
-                        </div>
-                        <!-- /.description-block -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-sm-4 border-right">
-                        <div class="description-block">
-                        <?php 
-                            $database = setupConnection();
-                            //perform query 
-                            $query = "SELECT departmentName FROM departments WHERE departmentID = '$empDepartment'";
-                            $result = mysqli_query($database, $query);
-                        ?>
-                        <h5 class="description-header"><?php echo mysqli_fetch_row($result)[0] ?></h5>
-                        <span class="description-text">DEPARTMENT</span>
-                        </div>
-                        <!-- /.description-block -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-sm-4">
-                        <div class="description-block">
-                        <h5 class="description-header"><?php echo $empPhoneNo ?></h5>
-                        <span class="description-text">PHONE NUMBER</span>
-                        </div>
-                        <!-- /.description-block -->
-                    </div>
-                    <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
+                <!-- /.card-body -->
                 </div>
             </div>
         </div>
