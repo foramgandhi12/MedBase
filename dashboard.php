@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MedBase</title>
+  <title>Dashboard</title>
 
   <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
@@ -21,9 +21,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- MedBase Logo -->
-        <a href="index3.html" class="brand-link">
-            <img src="public/img/MedBase.png" alt="MedBase Logo" class="brand-image img-circle elevation-3" style="float: revert; margin-left: 25%; max-height: 120px;">
-        </a>
+        <img src="public/img/MedBase Logo.png" alt="MedBase Logo" class="brand-image img-circle elevation-3" style="float: revert; margin-left: 25%; max-height: 120px;">
 
         <!-- Sidebar -->
         <div class="sidebar">
