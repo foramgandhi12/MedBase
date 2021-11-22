@@ -10,5 +10,5 @@
     $empDepartment = $emp[4];
     $empAddress = $emp[5];
     $empPhoneNo = $emp[6];
-    $empRoleID = $emp[7];
+    $empRoleID = $emp[8];
 ?>

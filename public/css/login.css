@@ -13,8 +13,8 @@ h1{
 .logo{
     width: 220px;
     height: 100px;
-    margin-left: -12%;
-    margin-top: 5%;
+    margin-left: -3%;
+    margin-top: 3%;
 }
 @media (min-width: 992px){
     .navbar li {
