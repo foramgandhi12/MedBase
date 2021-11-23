@@ -70,10 +70,10 @@
                 <!-- Add icons to the links using the .nav-icon class
                     with font-awesome or any other icon font library -->
                 <li class="nav-item menu-open" id="sidebar_elements">
-                    <!-- <?php sidebar_element("Label 1", "#"); ?>
-                    <?php sidebar_element("Label 2", "#"); ?>
-                    <?php sidebar_element("Label 3", "#"); ?>
-                    <?php sidebar_element("Label 4", "#"); ?> -->
+                    <!-- <?php //sidebar_element("Label 1", "#"); ?>
+                    <?php //sidebar_element("Label 2", "#"); ?>
+                    <?php //sidebar_element("Label 3", "#"); ?>
+                    <?php //sidebar_element("Label 4", "#"); ?> -->
                 </li>
             </ul>
             </nav>
@@ -95,7 +95,7 @@
             <div class="container-fluid">
                 <!-- Widget div -->
                 <div class="row" id="widget_row">
-                    <?php //add_widgets('150', '#', 'Bounce Rate', '53%', '#', 'calendar-check', 'User Registrations', '44', '#', 'person-add', 'Unique Visitors', '65', '#', 'pie-graph');?>
+                    <!-- <?php //add_widgets('150', '#', 'Bounce Rate', '53%', '#', 'calendar-check', 'User Registrations', '44', '#', 'person-add', 'Unique Visitors', '65', '#', 'pie-graph');?> -->
                 </div>
             </div>
         </section>
