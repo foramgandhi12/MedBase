@@ -7,14 +7,14 @@
 
   <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <?php include "element.php"; ?> 
   <?php include "employee.php"; ?> 
   <?php include "setupDatabaseConnection.php"; ?>
+  <?php include "sidebar.php"; ?>
+
   <script>
     document.getElementById('datePicker').value = new Date().toDateInputValue();
   </script>
@@ -30,57 +30,9 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
+    <!-- Insert the sidebar -->
+    <?php echo $imgLink = add_sidebar($empRoleID, $empName); ?>
 
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
-        <!-- MedBase Logo -->
-        <a href="#" class="brand-link">
-            <img src="public/img/MedBase Logo.png" alt="MedBase Logo" class="brand-image img-circle elevation-3" style="float: revert; max-height: 120px; margin-left: 25%;">
-        </a>
-
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <!-- Sidebar user panel-->
-            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-                <?php
-                    // user image changes depending on employee role (doctor, nurse, receptionist)
-                    switch ($empRoleID){
-                        case 1:
-                            $imgLink = "public/img/doctor.png";
-                            break;
-                        case 2:
-                            $imgLink = "public/img/nurse.png";
-                            break;
-                        case 3:
-                            $imgLink = "public/img/receptionist.png";
-                            break;
-                    }
-                ?>
-                <img src= <?php echo $imgLink ?> class="img-circle elevation-2" alt="User Image" style="width: 2.5rem;">
-            </div>
-            <div class="info">
-                <a href="#" class="d-block"><?php echo $empName; ?></a>
-            </div>
-            </div>
-
-            <!-- Sidebar Menu -->
-            <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
-                <!-- Add icons to the links using the .nav-icon class
-                    with font-awesome or any other icon font library -->
-                <li class="nav-item menu-open" id="sidebar_elements">
-                    <!-- <?php //sidebar_element("Label 1", "#"); ?>
-                    <?php //sidebar_element("Label 2", "#"); ?>
-                    <?php //sidebar_element("Label 3", "#"); ?>
-                    <?php //sidebar_element("Label 4", "#"); ?> -->
-                </li>
-            </ul>
-            </nav>
-            <!-- /.sidebar-menu -->
-        </div>
-        <!-- /.sidebar -->
-    </aside>
     <div class="content-wrapper">
         <div class="content-header">
             <div class="container-fluid">
