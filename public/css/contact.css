@@ -29,3 +29,26 @@
     height: 200px;
     width: 100%;
 }
+.vl1{
+    border-left: 1px solid #b8b8b8;
+    height: 150%;
+    position: absolute;
+    left: 10%;
+}
+.vl2{
+    border-left: 1px solid #b8b8b8;
+    height: 150%;
+    position: absolute;
+    right: 10%;
+}
+.hospital_headings{
+    color: #707070;
+    margin-left: 13%;
+}
+.map_embed{
+    height: 250px;
+    width: 60%;
+}
+.card-labels{
+    margin-top: -5px;
+}
