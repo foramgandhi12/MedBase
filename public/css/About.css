@@ -1,4 +1,79 @@
 hr.rounded {
-    border-top: 10px solid yellow;
-    border-radius: 5px;
+  border-top: 10px solid yellow;
+  border-radius: 5px;
+}
+h1{
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+.home_menu{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.logo{
+  width: 220px;
+  height: 100px;
+  margin-left: -3%;
+  margin-top: 3%;
+}
+@media (min-width: 992px){
+  .navbar li {
+      margin-left : 2em;
+      margin-right : 2em;
   }
+}
+.banner_item{
+  position: relative;
+  z-index: 1;
+  margin-left: 6%;
+  display: flex;
+  justify-content: space-between;
+}
+.vl1{
+  border-left: 1px solid #b8b8b8;
+  height: 80px;
+  position: absolute;
+  left: 15%;
+  top: 0;
+}
+.vl2{
+  border-left: 1px solid #b8b8b8;
+  height: 80px;
+  position: absolute;
+  left: 40%;
+  top: 0;
+}
+.vl3{
+  border-left: 1px solid #b8b8b8;
+  height: 120px;
+  position: absolute;
+  right: 5%;
+  top: 0;
+}
+i{
+  margin-bottom: 10px;
+  color: #007bff;
+}
+p{
+  font-family: "Playfair Display", serif;
+  color: #747474;
+}
+.fa-users{
+  margin-left: 6%;
+}
+#scheduling{
+  margin-left: -10%;
+}
+#patients{
+  margin-left: 9%;
+}
+#emrs{
+  margin-left: -2%;
+}
+#mail{
+  margin-left: 8%;
+}
