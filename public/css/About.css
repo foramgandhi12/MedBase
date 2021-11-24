@@ -44,14 +44,7 @@ h1{
   border-left: 1px solid #b8b8b8;
   height: 80px;
   position: absolute;
-  left: 40%;
-  top: 0;
-}
-.vl3{
-  border-left: 1px solid #b8b8b8;
-  height: 120px;
-  position: absolute;
-  right: 5%;
+  left: 68%;
   top: 0;
 }
 i{
@@ -61,19 +54,4 @@ i{
 p{
   font-family: "Playfair Display", serif;
   color: #747474;
-}
-.fa-users{
-  margin-left: 6%;
-}
-#scheduling{
-  margin-left: -10%;
-}
-#patients{
-  margin-left: 9%;
-}
-#emrs{
-  margin-left: -2%;
-}
-#mail{
-  margin-left: 8%;
 }
