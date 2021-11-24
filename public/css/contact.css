@@ -1,0 +1,54 @@
+.home_menu{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.logo{
+    width: 220px;
+    height: 100px;
+    margin-left: -3%;
+    margin-top: 1%;
+}
+@media (min-width: 992px){
+    .navbar li {
+        margin-left : 2em;
+        margin-right : 2em;
+    }
+}
+.hl{
+    margin-top: 9%;
+    border-bottom: 1px solid #b8b8b8;
+}
+.banner{
+    outline: 100px solid #0058b6a6 !important;
+    outline-offset: -100px;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+.vl1{
+    border-left: 1px solid #b8b8b8;
+    height: 150%;
+    position: absolute;
+    left: 10%;
+}
+.vl2{
+    border-left: 1px solid #b8b8b8;
+    height: 150%;
+    position: absolute;
+    right: 10%;
+}
+.hospital_headings{
+    color: #707070;
+    margin-left: 13%;
+}
+.map_embed{
+    height: 250px;
+    width: 60%;
+}
+.card-labels{
+    margin-top: -5px;
+}
