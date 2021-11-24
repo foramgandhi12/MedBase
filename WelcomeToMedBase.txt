@@ -1,0 +1,4 @@
+SELECT patients.patientName, patients.patientEmail, 
+patients.patientPhoneNumber,ward.ward_name,ward.ward_location, room.floorNumber, room.roomType
+FROM ((ward INNER JOIN patients on ward.ward_id = patients.ward_ID)
+      INNER JOIN room ON room.roomID = patients.roomID);

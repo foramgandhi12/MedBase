@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Receptionist Dashboard</title>
+        <title>Nurse Dashboard</title>
     </head>
     <body>
         <?php 
@@ -17,7 +17,7 @@
             $sidebar_fragment1 = $doc->createDocumentFragment();
             $sidebar_fragment1->appendXML(add_sidebar_element('Patient Details', 'patientDetails.php'));
             $sidebar_fragment2 = $doc->createDocumentFragment();
-            $sidebar_fragment2->appendXML(add_sidebar_element('Paitent Medical Records', '#'));
+            $sidebar_fragment2->appendXML(add_sidebar_element('Paitent Medical Records', 'paitentMedicalRecords.php'));
             $sidebar_fragment3 = $doc->createDocumentFragment();
             $sidebar_fragment3->appendXML(add_sidebar_element('Book Surgey', '#'));
             $sidebar_fragment4 = $doc->createDocumentFragment();
