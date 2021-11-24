@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bootstrap Example</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="public/css/login.css">
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+      <!-- Ionicons -->
+      <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="public/css/login.css">
 
     </head>
     <body>
@@ -41,31 +47,25 @@
                 <div class="row">
                   <h1>Additional Features</h1>
                 </div>
-                <div class="row">
-                    <div class="col-sm-3">
-                      <p>
-                        Scheduling
-                      </p>
-                    </div>
-                    <div class="col-sm-3">
-                      <p>
-                        Post-Surgery Assessment
-                      </p>
-                    </div>
-                    <div class="col-sm-3">
-                      <p>
-                        Discharging And Registration of Patients
-                      </p>
-                    </div>
-                    <div class="col-sm-3">
-                      <p>
-                        Emailing Patients
-                      </p>
-                    </div>
+                <br>
+                <div class="banner_item">
+                  <div class="single_item">
+                    <i class="fas fa-envelope fa-3x" id="envelope"></i>
+                    <p id="mail">Mail</p>
+                  </div>
+                  <div class="vl1"></div>
+                  <div class="single_item">
+                    <i class="fas fa-procedures fa-3x"></i>
+                    <p id="beds">Bed Manager</p>
+                  </div>
+                  <div class="vl2"></div>
+                  <div class="single_item">
+                    <i class="fas fa-notes-medical fa-3x"></i>
+                    <p id="emrs">EMRs</p>
+                  </div>
                 </div>
                 <br>
                 <hr class="rounded">
-                <br>
                 <div class="row">
                   <h1>Meet The Creators</h1>
                 </div>
@@ -83,11 +83,10 @@
                         <p class="card-text">
                           <strong>Doctor Dashboard</strong>
                           <li>Worked on Patient Details View</li>
-                          <li>Worked on Scheduling View </li>
-                          <li>Worked on Appointment page</li>
+                          <li>Worked on Scheduling View</li>
                         </p>
                         <p class="card-text">
-                          <strong>Loin Page</strong>
+                          <strong>Login Page</strong>
                           <li>Worked on the main Login page</li>
                           <li>Worked on the About Us Page</li>
                         </p>
@@ -106,9 +105,8 @@
                         <h5 class="card-title">Accomplishments:</h5>
                         <p class="card-text">
                           <strong>Doctor Dashboard</strong>
-                          <li>Worked on Post-Surgery Assesment page</li>
-                          <li>Worked on the emailing patients</li>
-                          <li>Worked on scheduling details of patients</li>
+                          <li>Worked on View Nurses module</li>
+                          <li>Worked on Post-Surgery Assessment module</li>
                         </p>
                         <p class="card-text">
                           <strong>Login Page</strong>
@@ -130,11 +128,12 @@
                       <div class="card-body">
                         <h5 class="card-title">Accomplishments:</h5>
                         <p class="card-text">
-                          <strong>Dashboard Sidebar</strong>
-                          <li>Worked on generating patient Medical Records</li>
-                          <li>Worked on generating patient Details</li>
-                          <li>Worked on Booking Surgery View</li>
-                          <li>Worked on generating a list of doctors and assigning four nurses to them at host</li>
+                          <strong>Nurse Dashboard</strong>
+                          <li>Worked on Patient Medical Records module</li>
+                          <li>Worked on Patient Details module</li>
+                          <li>Worked on Booking Surgery module</li>
+                          <li>Worked on View Doctors module</li>
+                          <li>Worked on the Contact Us page</li>
                         </p>
                       </div>
                     </div>
@@ -153,23 +152,23 @@
                       <div class="card-body">
                         <h5 class="card-title">Accomplishments</h5>
                         <p class="card-text">
-                          <strong>Dashboard Sidebar</strong>
-                          <li>Worked on patient Registration</li>
-                          <li>Worked on the Discharging of patients and billing them</li>
-                          <li>Worked on the bed managing for each room and ward</li>
-                          <li>Worked on generating the patient medical records</li>
+                          <strong>Receptionist Dashboard</strong>
+                          <li>Worked on Patient Registration module</li>
+                          <li>Worked on Discharging Patients module</li>
+                          <li>Worked on Bed Manager module</li>
+                          <li>Worked on Patient Medical Records module</li>
                         </p>
                         <p class="card-text">
-                          <strong>Login Page</strong>
-                          <li>Worked on the Main Login Page</li>
-                          <li>Worked on the verification of the login system</li>
+                          <strong>Dashboard Template</strong>
+                          <li>Worked on main dashboard</li>
+                          <li>Worked on sidebar template</li>
                         </p>
                       </div>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="card" style="width: 18rem; margin-left: 350px;">
-                      <img src="..." class="card-img-top" alt="...">
+                      <img src="public/img/Kinjal Shah.png" class="card-img-top" alt="...">
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item"><strong>Name: </strong>Kinjal Shah</li>
                         <li class="list-group-item"><strong>Role: </strong>Administrator</li>
@@ -178,7 +177,8 @@
                         <h5 class="card-title">Accomplishments:</h5>
                         <p class="card-text">
                           <strong>Admin Page</strong>
-                          <li>Worked on generating a list of docotr</li>
+                          <li>Worked on home page for Admin Login</li>
+                          <li>Worked on generating a list of doctor</li>
                           <li>Worked on adding a new doctor to the hospital</li>
                           <li>Worked on generating a list of Nurses View</li>
                           <li>Worked on adding a Nurses to the hospital</li>
