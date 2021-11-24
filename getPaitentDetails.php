@@ -12,8 +12,7 @@ $paiDoctor = "";
 $paiNurse = "";
 $paiDeceased = "";
 include "setupDatabaseConnection.php";
-setupConnection();
-global $database;
+$database = setupConnection();
 if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
     exit();

@@ -1,12 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "medbase";
-$database = '';
 function setupConnection()
 {
-    global $database,$password,$servername,$username,$db;
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $db = "medbase";
     // Create connection
     $database = mysqli_connect($servername, $username, $password, $db, 3308);
 
