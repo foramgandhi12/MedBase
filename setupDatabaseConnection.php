@@ -1,6 +1,5 @@
 <?php 
 function setupConnection(){
-    // session_start(); 
     $servername = "localhost";
     $username = "root";
     $password = "";
