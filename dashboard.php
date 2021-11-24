@@ -105,28 +105,28 @@
             <div class = "col md-6" style="max-width: 50%;">
                 <!-- Input addon -->
                 <div class="card card-info" style="margin-bottom: 15%; margin-right: 8px">
-                <div class="card-header"style="background-color: #6a5eb5;">
-                    <h3 class="card-title">Time Card</h3>
-                </div>
-                <div class="card-body">
-                    <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">#</span>
+                    <div class="card-header"style="background-color: #6a5eb5;">
+                        <h3 class="card-title">Time Card</h3>
                     </div>
-                    <input type="text" class="form-control" placeholder="Employee Number">
-                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">#</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Employee Number">
+                        </div>
 
-                    <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Hours Worked">
-                    <div class="input-group-append">
-                        <span class="input-group-text">.00</span>
-                    </div>
-                    </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Hours Worked">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
 
-                    <div class="input-group mb-3">
-                    <input type="date" class="form-control" value="" id="datePicker">
-                    </div>
-                    <a href="#" id="submit-form" class="btn btn-primary">Submit</a>
+                        <div class="input-group mb-3">
+                            <input type="date" class="form-control" value="" id="datePicker">
+                        </div>
+                        <a href="#" id="submit-form" class="btn btn-primary">Submit</a>
                 </div>
                 <!-- /.card-body -->
                 </div>
