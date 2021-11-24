@@ -1,14 +1,14 @@
 <?php
 	
-	$empID = $_POST['employeeID']
-	$flname = $_POST['firstlastname'];
-	$empSSN = $_POST['employeeSSN']
-	$empPosition = $_POST['employeePosition']
-	$empDpt = $_POST['employeeDepartment']
-	$empAddress = $_POST['employeeAddress']
-	$empPhone = $_POST['employeePhone']
-	$empPass = $_POST['employeePassword']
-	$roleID = $_POST['employeeRoleID']
+	$employeeID = $_POST['employeeID'];
+	$employeeName = $_POST['employeeName'];
+	$employeeSSN = $_POST['employeeSSN'];
+	$employeePosition = $_POST['employeePosition'];
+	$employeeDepartment = $_POST['employeeDepartment'];
+	$employeeAddress = $_POST['employeeAddress'];
+	$employeePhone = $_POST['employeePhone'];
+	$employeePass = $_POST['employeePassword'];
+	$roleID = $_POST['roleID'];
 
 
 	//database connection
@@ -27,9 +27,10 @@
         return null;
     }
     else{
-    	$stmt = $conn->prepare("insert into employee table(employeeID, firstlastname, employeeSSN, employeePosition, employeeDepartment, employeeAddress, employeePhone, employeePass, employeeRoleID)
+    	$stmt = $conn->prepare("insert into employee table(employeeID, employeeName, employeeSSN, employeePosition, employeeDepartment, employeeAddress, employeePhone, employeePass, roleID)
     		values(?,?,?,?,?,?,?,?,?");
-    	$stmt->bind_param("isisisisi", $empID, $flname, $empSSN, $empPosition, $empDept, $empAddress, $empPhone, $empPass, $roleID);
+    	$stmt->bind_param("isisisisi", $employeeID, $employeeName, $employeeSSN, $employeePosition, $employeeDepartment, $employeeAddress, 
+    		$employeePhone, $employeePass, $roleID);
     	$stmt->execute();
     	echo "Employee Added Successfully";
     	$stmt->close();
