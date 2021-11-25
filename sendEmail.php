@@ -32,20 +32,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
     if (isset($_POST['checkCopy'])) {
         // sends email to both patient and employee
-       
-        if(mail($email, $subject, $message, $headers)){
-            echo "sent";
-        }
-        else{
-            echo "error";
-        }
+        mail($email, $subject, $message, $headers);
     }
     else {
         // sends email to only patient
         mail($email, $subject, $message, $headers);
     }
-}
-else {
-    echo "not executing";
 }
 ?>
