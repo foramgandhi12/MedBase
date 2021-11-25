@@ -6,7 +6,7 @@ function setupConnection(){
     $db = "final_project";
     
     // Create connection
-    $database = mysqli_connect($servername, $username, $password, $db, 3308);
+    $database = mysqli_connect($servername, $username, $password, $db);
     
     //check connection
     if (mysqli_connect_errno()) {
