@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor List</title>
+</head>
+<body>
+    <div>
+        <?php
+            include "setupDatabaseConnection.php";
+            $database = setupConnection();
+            if(mysqli_connect_errno()){
+                echo "Failed to connect to MySQL: ".mysqli_connect_error();
+                exit();
+            }
+            else{
+                $sqlQ = "SELECT * FROM employee WHERE roleID = '".1."' ";
+                $result = mysqli_query($database, $sqlQ);
+                while ($row = mysqli_fetch_row($result)){
+                
+                    ?>
+                    <span>EmployeeID:</span><?php echo $row1['employeeID']; ?>
+                    <span>EmployeeName:</span><?php echo $row2['employeeName']; ?>
+                    <span>EmployeeSSN:</span><?php echo $row3['employeeSSN']; ?>
+                    <span>EmployeePosition:</span><?php echo $row4['employeePosition']; ?>
+                    <span>EmployeeDepartment:</span><?php echo $row5['employeeDepartment']; ?>
+                    <span>EmployeeAddress:</span><?php echo $row6['employeeAddress']; ?>
+                    <span>EmployeePhoneNumber:</span><?php echo $row7['employeePhoneNo']; ?>
+                    <span>EmployeePassword:</span><?php echo $row8['employeePassword']; ?>
+                    <span>roleID:</span><?php echo $row9['roleID']; ?>
+                <?php
+                }
+            }
+        ?>
+    </div>
+
+    <?php
+        mysql_close($database);
+    ?>
+
+
+</body>
+</html>
