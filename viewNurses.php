@@ -28,51 +28,48 @@
                         </div>
                     </div>
                     <span style="padding: 30px 0.5rem;">The table below indicates information about the nurses assigned to you.</span>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">My Nurses table</h3>
-                                </div>
-                                <!-- /.card-header -->
-                                <div class="card-body p-0">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th style="width: 10px">ID</th>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th style="width: 40px">Department #</th>
-                                                <th>Department Name</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                                $sql = "SELECT patients.nurseID, employee.employeeName, employee.employeePosition, employee.employeeDepartment, departments.departmentName
-                                                        FROM ((departments INNER JOIN employee ON departments.departmentID = employee.employeeDepartment)
-                                                        INNER JOIN patients ON patients.nurseID = employee.employeeID) WHERE patients.doctorID = $empID";
-                                                $result = mysqli_query($database, $sql);
-                                                
-                                                if ($result){
-                                                    while($row = mysqli_fetch_row($result)){
-                                                        echo "<tr>";
-                                                        echo "<td>$row[0]</td>";
-                                                        echo "<td>$row[1]</td>";
-                                                        echo "<td><div><div style='width: 55%'>$row[2]</div></div></td>";
-                                                        echo "<td><span>$row[3]</span></td>";
-                                                        echo "<td>$row[4]</td>";
-                                                        echo "</tr>";
-                                                    }
-                                                }
-                                            ?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /.card-body -->
-                            </div>
-                            <!-- /.card -->
+                   
+                    <div class="card" style="margin: 30px 0.5rem;">
+                        <div class="card-header" style="background-color: #79aeebe0">
+                            <h3 class="card-title">My Nurses Table</h3>
                         </div>
+                        <!-- /.card-header -->
+                        <div class="card-body p-0">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Position</th>
+                                        <th>Department #</th>
+                                        <th>Department Name</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        $sql = "SELECT patients.nurseID, employee.employeeName, employee.employeePosition, employee.employeeDepartment, departments.departmentName
+                                                FROM ((departments INNER JOIN employee ON departments.departmentID = employee.employeeDepartment)
+                                                INNER JOIN patients ON patients.nurseID = employee.employeeID) WHERE patients.doctorID = $empID";
+                                        $result = mysqli_query($database, $sql);
+                                        
+                                        if ($result){
+                                            while($row = mysqli_fetch_row($result)){
+                                                echo "<tr>";
+                                                echo "<td>$row[0]</td>";
+                                                echo "<td>$row[1]</td>";
+                                                echo "<td><div><div style='width: 55%'>$row[2]</div></div></td>";
+                                                echo "<td><span>$row[3]</span></td>";
+                                                echo "<td>$row[4]</td>";
+                                                echo "</tr>";
+                                            }
+                                        }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
                     </div>
+                    <!-- /.card -->
                 </div>
             </div>
         </div>                
