@@ -46,9 +46,7 @@
         <section class="content">
             <div class="container-fluid">
                 <!-- Widget div -->
-                <div class="row" id="widget_row">
-                    <!-- <?php //add_widgets('150', '#', 'Bounce Rate', '53%', '#', 'calendar-check', 'User Registrations', '44', '#', 'person-add', 'Unique Visitors', '65', '#', 'pie-graph');?> -->
-                </div>
+                <div class="row" id="widget_row"></div>
             </div>
         </section>
         <br><br>            
