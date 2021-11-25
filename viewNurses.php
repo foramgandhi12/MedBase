@@ -53,7 +53,7 @@
                                                         INNER JOIN employee ON employee.employeeDepartment = departments.departmentID) WHERE patients.doctorID = $empID";
                                                 $result = mysqli_query($database, $sql);
                                                 
-                                                if ($query){
+                                                if ($result){
                                                     while($row = mysqli_fetch_row($result)){
                                                         echo "<td>$row[0]</td>";
                                                         echo "<td>$row[1]</td>";
