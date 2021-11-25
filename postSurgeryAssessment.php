@@ -6,7 +6,7 @@
         <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <script type="text/javascript" src="ps_assessment.js"></script>
+        <script type="text/javascript" src="public/js/ps_assessment.js"></script>
         <?php include "employee.php"; ?> 
         <?php include "setupDatabaseConnection.php"; ?>
         <?php include "sidebar.php"; ?>

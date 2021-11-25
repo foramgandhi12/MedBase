@@ -29,8 +29,8 @@ function validateInputs(){
                 console.error(xhr);
             }
         });
-        location.href = 'sendEmail.php';
+        location.href = '../sendEmail.php';
         alert("Your email has been sent to the patient.");
-        location.href = 'postSurgeryAssessment.php';
+        location.href = '../postSurgeryAssessment.php';
     }
 }
