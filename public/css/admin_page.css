@@ -10,7 +10,7 @@ html {
 css for the navbar dropdown menu
 */
 
-ul{
+.navbar-items{
 	list-style-type: none;
 	margin: 0;
 	padding-left: 100px;
@@ -84,18 +84,25 @@ css for the background for the main page
 }
 
 .text{
-    padding: 150px;
-    /*
+    padding-top: 250px;
     padding-left: 10px;
-	padding-top: 100px;
-	padding-right: 30px;
-    */
+    padding-right: 10px;
+
 }
 
 .admin_tasks{
     padding: 150px;
 }
 
+.tasks-items{
+    /*list-style-type: none;*/
+    padding-left: 0px;
+}
+
+.image_2{
+    padding-top: 180px;
+    width: 100%;
+}
 /*
 css for the forms
 */
@@ -112,7 +119,7 @@ input[type=text], select {
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #4c9baf;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -122,11 +129,12 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #7ac7d1;
 }
 
-.doctor_form {
+.employee_form {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  margin: 20px;
 }
