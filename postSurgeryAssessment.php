@@ -6,16 +6,26 @@
         <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <link rel="stylesheet" href="public/css/postSurgery.css">
-
+        
         <?php include "employee.php"; ?> 
         <?php include "setupDatabaseConnection.php"; ?>
         <?php include "sidebar.php"; ?>
 
         <script>
-            function validateInputs(){
-                return True;
+          function validateInputs(){
+            inputs = document.getElementsByClassName('form-control');
+            count = 0;
+            for (var inp = 0; inp < inputs.length; inp++){
+              if (inputs[inp].value){
+                count++;
+              }
             }
+            if (count == inputs.length){
+              location.href = 'sendEmail.php';
+              alert("Your email has been sent to the patient.");
+              location.href = 'postSurgeryAssessment.php';
+            }
+          }
         </script>
     </head>
     <body>
@@ -40,7 +50,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form class="form-horizontal" action="sendEmail.php" method="POST">
+              <form class="form-horizontal" method="POST" onsubmit="return false;">
                 <div class="card-body">
                   <div class="form-group row">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Patient Email</label>
@@ -95,7 +105,6 @@
                 <!-- /.card-footer -->
               </form>
             </div>
-                <!--date and time of surgery; alert at submit; add empEmail to db-->
         </div>
     </body>
 </html>

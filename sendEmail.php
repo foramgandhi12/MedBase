@@ -1,8 +1,5 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
-set_error_handler("var_dump");
-include "employee.php";
+include "setupDatabaseConnection.php";
 
 if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['subbtn'])){
     
@@ -11,8 +8,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['subbtn'])){
     $operation_procedure = $_POST['inputProcedure'];
     $prescription = $_POST['inputPrescription'];
     $postCare = $_POST['inputCare'];
-
-    $database = mysqli_connect('localhost', 'root', '', 'final_project');
 
     // message
     $msg = "<html>
