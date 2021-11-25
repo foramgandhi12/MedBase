@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Doctor List</title>
+    <title>Nurse List</title>
 </head>
 <body>
     <?php
@@ -12,13 +12,13 @@
             exit();
         }
         else{
-            $sqlQ = "SELECT * FROM employee WHERE roleID = '".1."' ";
+            $sqlQ = "SELECT * FROM employee WHERE roleID = 2";
             $result = mysqli_query($database, $sqlQ);
             while ($row = mysqli_fetch_row($result)){
-                echo "<br> id: ". $row["employeeID"]. " - Name: ". $row["employeeName"]. "<br>";
+                echo "<br> id: ". $row[0]. " - Name: ". $row[1]. "<br>";
             }
         }
-        mysql_close($database);
+        mysqli_close($database);
     ?>
 
 

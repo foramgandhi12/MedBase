@@ -10,7 +10,6 @@
 	$employeePassword = $_POST['employeePassword'];
 	$roleID = $_POST['roleID'];
 
-
 	//database connection
     // session_start(); 
     $servername = "localhost";
