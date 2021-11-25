@@ -48,14 +48,18 @@
                                         </thead>
                                         <tbody>
                                             <?php
-                                                $sql = "";
-                                                $query = mysqli_query($conn, $sql);
+                                                $sql = "SELECT patients.nurseID, employee.employeeName, employee.employeePosition, employee.employeeDepartment, departments.departmentName
+                                                        FROM ((patients INNER JOIN employee ON patients.nurseID = employee.employeeID)
+                                                        INNER JOIN employee ON employee.employeeDepartment = departments.departmentID) WHERE patients.doctorID = $empID";
+                                                $result = mysqli_query($database, $sql);
                                                 
                                                 if ($query){
-                                                    echo "<td></td>";
-                                                    echo "<td></td>";
-                                                    echo "<td><div><div style='width: 55%'></div></div></td>";
-                                                    echo "<td><span>55%</span></td>";
+                                                    while($row = mysqli_fetch_row($result)){
+                                                        echo "<td>$row[0]</td>";
+                                                        echo "<td>$row[1]</td>";
+                                                        echo "<td><div><div style='width: 55%'>$row[2]</div></div></td>";
+                                                        echo "<td><span>$row[3]</span></td>";
+                                                    }
                                                 }
                                             ?>
                                             <tr>
