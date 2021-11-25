@@ -1,8 +1,7 @@
 <?php
 include "setupDatabaseConnection.php";
 
-if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['subbtn'])){
-    
+if($_SERVER['REQUEST_METHOD'] == "POST"){
     $email = $_POST['inputEmail'];
     $surgery_type = $_POST['inputSurgery'];
     $operation_procedure = $_POST['inputProcedure'];
@@ -23,21 +22,30 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['subbtn'])){
                 <body>
             <html>";
     
-    $message = wordwrap($msg, 150);
-
+    $message = wordwrap($msg, 500);
+    
     //formats html in the email
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= 'From: medbase@gmail.com';
+    $headers .= 'From: foram4444@gmail.com';
     $subject = $_POST['inputSubject'];
 
     if (isset($_POST['checkCopy'])) {
         // sends email to both patient and employee
-        mail($email, $subject, $message, $headers);
+       
+        if(mail($email, $subject, $message, $headers)){
+            echo "sent";
+        }
+        else{
+            echo "error";
+        }
     }
     else {
         // sends email to only patient
         mail($email, $subject, $message, $headers);
     }
+}
+else {
+    echo "not executing";
 }
 ?>

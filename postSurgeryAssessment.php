@@ -2,31 +2,14 @@
 <html>
     <head>
         <title>Post-Surgery Assessment</title>
-        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
         <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        
+        <script type="text/javascript" src="ps_assessment.js"></script>
         <?php include "employee.php"; ?> 
         <?php include "setupDatabaseConnection.php"; ?>
         <?php include "sidebar.php"; ?>
-
-        <script>
-          function validateInputs(){
-            inputs = document.getElementsByClassName('form-control');
-            count = 0;
-            for (var inp = 0; inp < inputs.length; inp++){
-              if (inputs[inp].value){
-                count++;
-              }
-            }
-            if (count == inputs.length){
-              location.href = 'sendEmail.php';
-              alert("Your email has been sent to the patient.");
-              location.href = 'postSurgeryAssessment.php';
-            }
-          }
-        </script>
     </head>
     <body>
         <?php echo $imgLink = add_sidebar($empRoleID ,$empName) ?>
@@ -50,7 +33,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form class="form-horizontal" method="POST" onsubmit="return false;">
+              <form class="form-horizontal" action="postSurgeryAssessment.php" method="POST" >
                 <div class="card-body">
                   <div class="form-group row">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Patient Email</label>
@@ -99,8 +82,8 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" id="subbtn" name="subbtn" class="btn btn-info" onclick="validateInputs()">Send Email</button>
-                  <button type="submit" class="btn btn-default float-right" onclick="window.location.reload()">Cancel</button>
+                  <button id="subbtn" name="subbtn" class="btn btn-info" onclick="return validateInputs()">Send Email</button>
+                  <button class="btn btn-default float-right" onclick="window.location.reload()">Cancel</button>
                 </div>
                 <!-- /.card-footer -->
               </form>
