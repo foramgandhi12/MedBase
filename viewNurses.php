@@ -49,8 +49,8 @@
                                         <tbody>
                                             <?php
                                                 $sql = "SELECT patients.nurseID, employee.employeeName, employee.employeePosition, employee.employeeDepartment, departments.departmentName
-                                                        FROM ((patients INNER JOIN employee ON patients.nurseID = employee.employeeID)
-                                                        INNER JOIN employee ON employee.employeeDepartment = departments.departmentID) WHERE patients.doctorID = $empID";
+                                                        FROM ((departments INNER JOIN employee ON departments.departmentID = employee.employeeDepartment)
+                                                        INNER JOIN patients ON patients.nurseID = employee.employeeID) WHERE patients.doctorID = $empID";
                                                 $result = mysqli_query($database, $sql);
                                                 
                                                 if ($result){
@@ -60,20 +60,11 @@
                                                         echo "<td>$row[1]</td>";
                                                         echo "<td><div><div style='width: 55%'>$row[2]</div></div></td>";
                                                         echo "<td><span>$row[3]</span></td>";
+                                                        echo "<td>$row[4]</td>";
                                                         echo "</tr>";
                                                     }
                                                 }
                                             ?>
-                                            <!-- <tr>
-                                                <td>1.</td>
-                                                <td>Update software</td>
-                                                <td>
-                                                    <div class="progress progress-xs">
-                                                        <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                                                    </div>
-                                                </td>
-                                                <td><span class="badge bg-danger">55%</span></td>
-                                            </tr> -->
                                         </tbody>
                                     </table>
                                 </div>
