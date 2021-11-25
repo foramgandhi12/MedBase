@@ -13,15 +13,16 @@ css for the navbar dropdown menu
 ul{
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding-left: 100px;
 	overflow: hidden;
-	background-color: #333;
+	background-color: white;
 }
 
 li{
 	float: left;
 	margin: 5px;
 	padding: 5px;
+    font-size: 20px;
 }
 
 li a, .dropbtn{
@@ -76,22 +77,23 @@ css for the background for the main page
 }
 
 .image{
-	flex-basis: 50%;
-	width: 100%
+	flex-basis: 35%;
+	width: 100%;
+    padding-left: 50px;
+    
 }
 
 .text{
-	padding-left: 10px;
+    padding: 150px;
+    /*
+    padding-left: 10px;
 	padding-top: 100px;
 	padding-right: 30px;
+    */
 }
 
-.kinjal_image{
-	align-items: right;
-	width: 25%;
-	height: 25%;
-	padding-top: 100px;
-	padding-left: 40px;
+.admin_tasks{
+    padding: 150px;
 }
 
 /*
