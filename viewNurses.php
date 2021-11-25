@@ -55,14 +55,16 @@
                                                 
                                                 if ($result){
                                                     while($row = mysqli_fetch_row($result)){
+                                                        echo "<tr>";
                                                         echo "<td>$row[0]</td>";
                                                         echo "<td>$row[1]</td>";
                                                         echo "<td><div><div style='width: 55%'>$row[2]</div></div></td>";
                                                         echo "<td><span>$row[3]</span></td>";
+                                                        echo "</tr>";
                                                     }
                                                 }
                                             ?>
-                                            <tr>
+                                            <!-- <tr>
                                                 <td>1.</td>
                                                 <td>Update software</td>
                                                 <td>
@@ -71,7 +73,7 @@
                                                     </div>
                                                 </td>
                                                 <td><span class="badge bg-danger">55%</span></td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                     </table>
                                 </div>
