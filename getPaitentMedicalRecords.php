@@ -80,7 +80,7 @@ function buildInfo()
         </div>
         <div class="form-group col-md-4">
             <label for="paiAll">Allergies</label>
-            <input type="text" class="form-control" name="paiAll" placeholder="Wastemans, and Snakes" value = "<?php echo $paiAllergies; ?>">
+            <input type="text" class="form-control" name="paiAll" placeholder="Peanuts, Treenuts, Fish" value = "<?php echo $paiAllergies; ?>">
         </div>
     </div>
    
@@ -109,11 +109,11 @@ function buildInfo()
     <div class="form-row">
         <div class="form-group col-md-4">
             <label for="paiFamiyDoc">Family Doctor</label>
-            <input type="text" class="form-control" name="paiFamiyDoc" placeholder="Dr. Rum Suckers" value = "<?php echo $paiFamDoc; ?>">
+            <input type="text" class="form-control" name="paiFamiyDoc" placeholder="Dr.Phil" value = "<?php echo $paiFamDoc; ?>">
         </div>
         <div class="form-group col-md-4">
             <label for="paiEmgC">Emergency Contact Name</label>
-            <input type="text" class="form-control" name="paiEmgC" placeholder="Mr. Rogers" value = "<?php echo $paiEmgName; ?>">
+            <input type="text" class="form-control" name="paiEmgC" placeholder="Mr.Rogers" value = "<?php echo $paiEmgName; ?>">
         </div>
         <div class="form-group col-md-4">
             <label for="paiEmgNo">Emergency Contact Number</label>

@@ -15,7 +15,7 @@
             <div class='small-box bg-info'>
                 <div class='inner'>
                     <h3>$widget1Data</h3>
-                    <p>Total Patients</p>
+                    <p>Total Patient</p>
                 </div>
                 <div class='icon'>
                     <i class='fas fa-user-injured'></i>

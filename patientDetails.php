@@ -2,10 +2,6 @@
 <html>
 <script>
     function showUser(str) {
-        // if (str == "") {
-        //     document.getElementById("paitentInfo").innerHTML = "";
-        //     return;
-        // } else {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -14,7 +10,6 @@
         };
         xmlhttp.open("GET", "getPaitentDetails.php?q=" + str, true);
         xmlhttp.send();
-        //}
     }
 </script>
 
@@ -101,7 +96,7 @@ function generateTable(){
         </div>
         <br><br>
         <form class="w-75 mx-auto card p-5">
-            <h2 class="mx-auto">More Patient Details</h2>
+            <h2 class="mx-auto">Patient Details</h2>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="paiSelName">Select Paitent</label>
@@ -114,7 +109,6 @@ function generateTable(){
             <!-- Start -- patient info will be loaded here -->
             <div id="paitentInfo"></div>
             <!-- end -->
-            <button class="btn btn-primary mb-2 w-50 mx-auto" disabled>Update Paitent Details</button>
         </form>
     </div>
 </body>

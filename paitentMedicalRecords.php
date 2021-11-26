@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+
     function showUser(str) {
-        // if (str == "") {
-        //     document.getElementById("paitentInfo").innerHTML = "";
-        //     return;
-        // } else {
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -14,7 +14,7 @@
         };
         xmlhttp.open("GET", "getPaitentMedicalRecords.php?q=" + str, true);
         xmlhttp.send();
-        //}
+
     }
 </script>
 
@@ -57,9 +57,9 @@ function getPaitents()
     <div class="content-wrapper">
         <h1 class="card mx-auto w-50 d-flex flex-row align-items-center justify-content-center p-2"><i class="p-2 fas fa-hospital-user"></i> Patient Medical Records</h1>
         <br><br>
-        <form class="w-75 mx-auto card p-5" action="generateMedPdf.php" method="POST">
+        <form class="w-75 mx-auto card p-5" action="makeJSON.php" method="POST">
             <h2 class="mx-auto">Patient Records</h2>
-            <button type="submit" class="btn btn-primary w-25 ml-auto" style="height: 50px;">Download PDF</button>
+            <button type="submit" name="makePDF" class="btn btn-primary w-25 ml-auto" style="height: 50px;">Download PDF</button>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="paiSelName">Select Paitent</label>
@@ -68,7 +68,7 @@ function getPaitents()
                         <?php echo getPaitents(); ?>
                     </select>
                 </div>
-                
+
             </div>
             <!-- Start -- patient info will be loaded here -->
             <div id="paitentInfo"></div>
@@ -77,5 +77,4 @@ function getPaitents()
         </form>
     </div>
 </body>
-
 </html>

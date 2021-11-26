@@ -174,7 +174,7 @@ function buildInfo()
     <div class="form-row">
         <div class="form-group col-md-4">
             <label for="paiTreat">Treatment</label>
-            <input type="text" class="form-control" name="paiTreat" placeholder="Drugs, Lots of them" value="<?php echo $paiTreatment ?>">
+            <input type="text" class="form-control" name="paiTreat" placeholder="ibuprofen" value="<?php echo $paiTreatment ?>">
         </div>
         <div class="form-group col-md-2">
             <label for="wardNam">Ward</label>

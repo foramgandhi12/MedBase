@@ -19,9 +19,9 @@
             $sidebar_fragment2 = $doc->createDocumentFragment();
             $sidebar_fragment2->appendXML(add_sidebar_element('Paitent Medical Records', 'paitentMedicalRecords.php'));
             $sidebar_fragment3 = $doc->createDocumentFragment();
-            $sidebar_fragment3->appendXML(add_sidebar_element('Book Surgey', '#'));
+            $sidebar_fragment3->appendXML(add_sidebar_element('Book Surgey', 'bookSurgery.php'));
             $sidebar_fragment4 = $doc->createDocumentFragment();
-            $sidebar_fragment4->appendXML(add_sidebar_element('Select Doctor', '#'));
+            $sidebar_fragment4->appendXML(add_sidebar_element('Select Doctor', 'assignDoctor.php'));
 
             $sidebar_element->appendChild($sidebar_fragment1);
             $sidebar_element->appendChild($sidebar_fragment2);
