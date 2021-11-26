@@ -14,12 +14,8 @@
             padding: 8px;
         }
 
-        tr: nth-child(even){
+        tr{
             background-color: #f2f2f2;
-        }
-        
-        tr: hover{
-            background-color: #ddd;
         }
 
         th{
