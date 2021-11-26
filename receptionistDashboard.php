@@ -19,7 +19,7 @@
             $sidebar_fragment2 = $doc->createDocumentFragment();
             $sidebar_fragment2->appendXML(add_sidebar_element('Discharging Patients', 'dischargePatient.php'));
             $sidebar_fragment3 = $doc->createDocumentFragment();
-            $sidebar_fragment3->appendXML(add_sidebar_element('Patient Medical Records', '#'));
+            $sidebar_fragment3->appendXML(add_sidebar_element('Patient Medical Records', 'paitentMedicalRecords.php'));
             $sidebar_fragment4 = $doc->createDocumentFragment();
             $sidebar_fragment4->appendXML(add_sidebar_element('Bed Manager', 'bedManager.php'));
 
