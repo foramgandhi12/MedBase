@@ -23,6 +23,11 @@ if ($database != null){
     $insertPatientQuery = "INSERT INTO patients(patientID, patientName, patientAddress, patientEmail, patientPhoneNumber, ReasonForVisit, ward_ID, roomID, CheckInDate, doctorID, nurseID, is_deceased) VALUES ('$index', '$patientName', '$patientAddress', '$patientEmail', '$patientPhoneNumber', '$patientReasonForVisit', '$patientWard', '$patientRoomId', '$patientCheckInDateTime', '$patientDoctor', '$patientNurse', '0')"; 
     // Run query
     $insertPatientResult = mysqli_query($database, $insertPatientQuery);
+
+    // Decrement the num of avalible rooms in specified room ID
+    $decrementRoomIDQuery = "UPDATE room SET num_beds = num_beds - 1 WHERE roomID = '$patientRoomId'";
+    $decrementRoomIDResult = mysqli_query($database, $decrementRoomIDQuery);
+
     // After execution return back to the patient registration page
     header("Location: patientRegistration.php");
 }
