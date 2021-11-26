@@ -1,3 +1,7 @@
+<!-- 
+	inserting the new employees to the database
+	create connection and create a table to display to the user
+-->
 <!DOCTYPE html>
 <html>
 <head>

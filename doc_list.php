@@ -1,3 +1,7 @@
+<!-- 
+    Display the list of doctors to the user, create connection to the database, create tables
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
