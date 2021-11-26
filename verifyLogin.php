@@ -30,7 +30,7 @@ if ($database != null){
                 header("Location: doctorDashboard.php");
             }
             else if ($position_form == '2'){
-
+                header("Location: nurseDashboard.php");
             }
             else if ($position_form == '3'){
                 header("Location: receptionistDashboard.php");
@@ -38,9 +38,13 @@ if ($database != null){
         }
     } else if (isset($_POST['admin'])){
         echo "admin login";
-        if($username_form = "Admin" && $password_form="Admin"){
+        if($username_form == "Admin" && $password_form == "Admin"){
             header("Location: admin_page.html");
             exit();
+        }else{
+            $msg = "Invalid login! Please re-enter your credentials.";
+            echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+            header("Location: Login.html");
         }
     }
 }
