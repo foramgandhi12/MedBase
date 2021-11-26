@@ -1,0 +1,71 @@
+<!--
+	Form for adding new employees to the system
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<Title>Employees Form</Title>
+	<link rel="stylesheet" type="text/css" href="public/css/admin_page.css">
+</head>	
+
+<body>
+	<!-- Employees Form -->
+	<div class = "employee_form">
+		<form action = "insert_employee.php" method="POST">
+				<h1 style = "background-color: #4c9baf">Employees Form</h1>
+				<br>
+
+				<label for = "employeeID">Employee ID</label>
+				<input type = "text" id = "employeeID" name = "employeeID" placeholder = "Enter Employee ID Here..." required>
+
+				<label for= "employeeName">First and Last Name</label>
+				<input type = "text" id = "employeeName" name = "employeeName" placeholder = "Employee First Name and Last Name Here..." required >
+
+				<label for = "employeeSSN">Employee SSN</label>
+				<input type = "text" id = "employeeSSN" name = "employeeSSN" placeholder = "Enter Employees SSN Here..." required>
+
+				<label for = "employeePosition">Position</label>
+				<input type = "text" id = "employeePosition" name = "employeePosition" placeholder = "Enter Employees Position Here..." required>
+
+				<label for = "employeeDepartment">Department</label>
+				<select id = "employeeDepartment" name = "employeeDepartment" required>
+					<option selected>Select Department Option</option>
+					<option value = "1">1 - Accident and Emergency</option>
+					<option value = "2">2 - Admission</option>
+					<option value = "3">3 - Cardiology</option>
+					<option value = "1">4 - ICU</option>
+					<option value = "2">5 - NICU</option>
+					<option value = "3">6 - Maternity</option>
+					<option value = "1">7 - Neurology</option>
+					<option value = "2">8 - Radiology</option>
+					<option value = "3">9 - Physiotherapy</option>
+					<option value = "1">10 - Pharmacy</option>
+					<option value = "2">11 - Rehabilitation</option>
+					<option value = "3">12 - Pediatric</option>
+				</select>
+
+				<label for = "employeeAddress">Address</label>
+				<input type = "text" id = "employeeAddress" name = "employeeAddress" placeholder = "Enter Employees Address Here..." required>
+
+				<label for = "employeePhone">Phone</label>
+				<input type = "text" id = "employeePhone" name = "employeePhone" placeholder = "Enter Employees Phone Number Here..." required>
+
+				<label for = "employeePassword">Password</label>
+				<input type = "text" id = "employeePassword" name = "employeePassword" placeholder = "Enter Employees Password Here...">
+
+				<label for = "roleID">Role ID</label>
+				<select id = "roleID" name = "roleID" required>
+					<option selected>Select roleID Option</option>
+					<option value = "1">1 - Doctors</option>
+					<option value = "2">2 - Nurses</option>
+					<option value = "3">3 - Receptionists</option>
+				</select>
+
+				<input type = "submit" value = "Submit">
+
+		</form>
+	</div>
+</body>
+</html>

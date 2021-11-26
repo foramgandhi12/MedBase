@@ -1,0 +1,63 @@
+<!--
+	Main Page for the Administrator includes NavBar and some dashboard-like icons and text
+-->
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<Title>AdminPage</Title>
+	<link rel="stylesheet" type="text/css" href="public/css/admin_page.css">
+</head>
+
+<body style = "font-family: Arial, Helvetica, sans-serif;">
+	<!-- Navbar --> 
+	<div class = "admin_navbar">
+		<nav>
+			<img src="public/img/MedBase Logo.png" width="130" height="130" alt="medbase logo">
+			<ul class = "navbar-items" style = "background-color: rgb(199, 207, 245);">
+				<li><a href="#home">Home</a></li>
+				<li class = "dropdown"><a href="#" class="dropbtn">Doctors</a>
+					<div class="dropdown-content"> 
+						<a href="employee_form.html">Add Doctors</a>
+						<a href="doc_list.php">Doctors List</a>
+					</div>
+				</li>
+
+				<li class = "dropdown"><a href="#" class="dropbtn">Nurses</a>
+					<div class="dropdown-content">
+						<a href="employee_form.html">Add Nurses</a>
+						<a href="nurse_list.php">Nurses List</a>
+					</div>
+				</li>
+				
+				<li class = "dropdown"><a href="#" class="dropbtn">Receptionists</a>
+					<div class="dropdown-content">
+						<a href="employee_form.html">Add Receptionists</a>
+						<a href="receptionists_list.php">Receptionists List</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+    
+
+    <div class = "mainpage_background">
+        <img src = "public/img/adminpage_img.jpg" alt = "admin page image" class = "image">
+        <h2 class = "text" style = "color: rgb(36, 115, 233)">Welcome, Admin!</h2>
+        <div class = "admin_tasks">
+            <h2>Todays Tasks!</h2>
+            <ol class = "tasks-items">
+                <li>Check New Messages</li><br>
+                <li>Add 4 New Doctors</li><br>
+                <li>Add 6 New Receptionists</li><br>
+                <li>Add 3 New Nurses</li><br>
+                <li>Routine Check Updated Employee Lists</li>
+            </ol>
+        </div>
+    </div>
+   
+
+</body>
+
+</html>

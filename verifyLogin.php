@@ -26,14 +26,22 @@ if ($database != null){
             session_start();
             $emp_info = $_REQUEST['emp_info'];
             $_SESSION['emp_info'] = mysqli_fetch_row($result);
-            header("Location: nurseDashboard.php");
+            if ($position_form == '1'){
+                header("Location: doctorDashboard.php");
+            }
+            else if ($position_form == '2'){
+                header("Location: nurseDashboard.php");
+            }
+            else if ($position_form == '3'){
+                header("Location: receptionistDashboard.php");
+            }
         }
     } else if (isset($_POST['admin'])){
         echo "admin login";
-        // if($username_form = "Admin" && $password_form="Admin"){
-        //     header("Location: Admin.php");
-        //     exit();
-        // }
+        if($username_form = "Admin" && $password_form="Admin"){
+            header("Location: admin_page.html");
+            exit();
+        }
     }
 }
 ?>
