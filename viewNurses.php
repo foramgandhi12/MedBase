@@ -15,10 +15,9 @@
         <?php
         $database = setupConnection();
         echo $imgLink = add_sidebar($empRoleID, $empName);
-        
-        //Fetch information to display in the nurses table (nurseID, employeeName, employeePosition, employeeDepartment#, departmentName)
         ?>
 
+        <!--Main Section-->
         <div class="content-wrapper extra" style="margin-top: -25px; margin-bottom: -7px">
             <div class="content-header">
                 <div class="container-fluid">
@@ -47,6 +46,7 @@
                                 </thead>
                                 <tbody>
                                     <?php
+                                        // Fetch data from database tables to place into nurse table
                                         $sql = "SELECT patients.nurseID, employee.employeeName, employee.employeePosition, employee.employeeDepartment, departments.departmentName
                                                 FROM ((departments INNER JOIN employee ON departments.departmentID = employee.employeeDepartment)
                                                 INNER JOIN patients ON patients.nurseID = employee.employeeID) WHERE patients.doctorID = $empID";
