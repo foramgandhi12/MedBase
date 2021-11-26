@@ -7,7 +7,7 @@ $database = setupConnection();
 $paitentData = array();
 if ($database != null) {
     // $sql = "SELECT * FROM patients WHERE patientID=".$paiID."";
-    $sql = "SELECT * FROM patients WHERE patientID=1";
+    $sql = "SELECT * FROM patients WHERE patientID=".$_POST['paiSelName']."";
     $result = mysqli_query($database, $sql);
 
     while ($row = mysqli_fetch_array($result)) {
@@ -21,7 +21,7 @@ if ($database != null) {
     }
 
     // $sql1 = "SELECT * FROM medical_records WHERE patientID=".$paiID."";
-    $sql1 = "SELECT * FROM medical_records WHERE patientID=1";
+    $sql1 = "SELECT * FROM medical_records WHERE patientID=".$_POST['paiSelName']."";
     $res = mysqli_query($database, $sql1);
     while ($row = mysqli_fetch_array($res)) {
         $paitentData += array(
