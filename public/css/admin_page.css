@@ -76,18 +76,13 @@ css for the background for the main page
 
 .mainpage_background{
 	display: flex;
-	align-items: left;
-	justify-content: left;
+	align-items: center;
+	justify-content: wrap;
+	flex-basis: auto;
 }
 
 .image{
-	flex-basis: 20%;
-	width: 50%;
-}
-
-.text{
-    padding-top: 250px;
-
+	flex-basis: auto;
 }
 
 .admin_tasks{
@@ -99,10 +94,6 @@ css for the background for the main page
     padding-left: 0px;
 }
 
-.image_2{
-    padding-top: 180px;
-    width: 100%;
-}
 /*
 css for the forms
 */
