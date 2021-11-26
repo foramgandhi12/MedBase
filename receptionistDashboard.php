@@ -53,7 +53,7 @@
             $totalDepartments = mysqli_fetch_row($totalDepartmentsResult)[0];
 
             // TODO: get data values though SQL scripts
-            $widgets_fragment->appendXML(add_widgets($totalPatients, 'patientRegistration.php', 'Available Beds', $availableBeds, '#', 'procedures', 'Total Wards', $totalWards, '#', 'h-square', 'Total Departments', $totalDepartments, '#', 'hospital'));
+            $widgets_fragment->appendXML(add_widgets($totalPatients, 'patientRegistration.php', 'Available Beds', $availableBeds, 'bedManager.php', 'procedures', 'Total Wards', $totalWards, 'bedManager.php', 'h-square', 'Total Departments', $totalDepartments, 'bedManager.php', 'hospital'));
             $widgets_element->appendChild($widgets_fragment);
 
             echo $doc->saveHTML();
