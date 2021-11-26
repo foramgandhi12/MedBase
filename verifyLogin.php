@@ -26,7 +26,15 @@ if ($database != null){
             session_start();
             $emp_info = $_REQUEST['emp_info'];
             $_SESSION['emp_info'] = mysqli_fetch_row($result);
-            header("Location: receptionistDashboard.php");
+            if ($position_form == '1'){
+                header("Location: doctorDashboard.php");
+            }
+            else if ($position_form == '2'){
+
+            }
+            else if ($position_form == '3'){
+                header("Location: receptionistDashboard.php");
+            }
         }
     } else if (isset($_POST['admin'])){
         echo "admin login";
