@@ -1,0 +1,32 @@
+<?php
+ob_end_clean();
+require('public/fpdf/fpdf.php');
+$pdf = new FPDF();
+$pdf->AddPage();
+$pdf->SetFont('Arial', 'B', 30);
+$pdf->Image('public/img/MedBase.png',0,0,60);
+$text = "MedBase Patient Medical Records";
+$paiJSON = file_get_contents($_POST['jsonFile']);
+$strJSON = json_decode($paiJSON, true);
+$pdf->Cell(0,50,$text,0,1,'C');
+$pdf->SetFont('Arial', 'B', 15);
+$pdf->Cell(0,0,"Patient Name: ".$strJSON['name'],0,1);  
+$pdf->Cell(0,20,"Address: ".$strJSON['address'],0,1);
+$pdf->Cell(0,0,"Email: ".$strJSON['email'],0,1);
+$pdf->Cell(0,20,"Reason For Visit: ".$strJSON['reason'],0,1);
+$pdf->Cell(0,0,"Check In date: ".$strJSON['date'],0,1);
+$pdf->Cell(0,20,"Gender: ".$strJSON['gender'],0,1);
+$pdf->Cell(0,0,"Date Of Birth: ".$strJSON['dob'],0,1);
+$pdf->Cell(0,20,"Age: ".$strJSON['age'],0,1);
+$pdf->Cell(0,0,"Allergies: ".$strJSON['allergies'],0,1);
+$pdf->Cell(0,20,"Height: ".$strJSON['height'],0,1);
+$pdf->Cell(0,0,"Weight: ".$strJSON['weight'],0,1);
+$pdf->Cell(0,20,"Blood Type: ".$strJSON['blood'],0,1);
+$pdf->Cell(0,0,"Medical Conditions: ".$strJSON['conditions'],0,1);
+$pdf->Cell(0,20,"Medications: ".$strJSON['medication'],0,1);
+$pdf->Cell(0,0,"Family Doctor: ".$strJSON['familyDoctor'],0,1);
+$pdf->Cell(0,20,"Emgergency Contact Name: ".$strJSON['emergencyContactName'],0,1);
+$pdf->Cell(0,0,"Emgergency Contact Number: ".$strJSON['emergencyContactNo'],0,1);
+$pdf->Output('I',"Medical Records.pdf");
+unlink($_POST['jsonFile']);
+?>
