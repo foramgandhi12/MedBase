@@ -30,10 +30,10 @@ if ($database != null){
         }
     } else if (isset($_POST['admin'])){
         echo "admin login";
-        // if($username_form = "Admin" && $password_form="Admin"){
-        //     header("Location: Admin.php");
-        //     exit();
-        // }
+        if($username_form = "Admin" && $password_form="Admin"){
+            header("Location: admin_page.html");
+            exit();
+        }
     }
 }
 ?>
