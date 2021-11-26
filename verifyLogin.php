@@ -26,7 +26,7 @@ if ($database != null){
             session_start();
             $emp_info = $_REQUEST['emp_info'];
             $_SESSION['emp_info'] = mysqli_fetch_row($result);
-            header("Location: receptionistDashboard.php");
+            header("Location: doctorDashboard.php");
         }
     } else if (isset($_POST['admin'])){
         echo "admin login";

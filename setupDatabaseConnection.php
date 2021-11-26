@@ -3,7 +3,7 @@ function setupConnection(){
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $db = "medbase";
+    $db = "final_project";
     
     // Create connection
     $database = mysqli_connect($servername, $username, $password, $db);
