@@ -73,7 +73,7 @@ function getInfo($sqlQ)
                         <?php echo getInfo("SELECT employee.employeeID, employee.employeeName FROM employee WHERE roleID=2") ?>
                     </select>
                 </div>
-                <div class="form-group col-md-2">
+                <div class="form-group col-md-4">
                     <label for="resDate">Date To Reserve Room</label>
                     <input type="date" name="resDate" class="form-control"/>
                 </div>
