@@ -107,7 +107,7 @@
             }
         }
         if (isset($_POST["AddTreatment"])) {
-            AddPatientTreatment($_POST["AddTreatment"]);
+            AssignPatient($_POST["AddTreatment"]);
         }
         ?>
         <div class="content-wrapper">
