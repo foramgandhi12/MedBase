@@ -30,69 +30,46 @@
                             <div class="card-header">
                                 <h3 class="card-title">Bed Manager</h3>
                             </div>
-                            <!-- ./card-header -->
-                            <div class="card-body p-0">
-                                <table class="table table-hover">
-                                    <tbody>
-                                        <?php
-                                            $database = setupConnection();
+                                <div class="card-body p-0">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            <?php
+                                                $database = setupConnection();
 
-                                            $getWardsQuery = "SELECT ward_id, ward_name FROM ward";
-                                            $getWardResults = mysqli_query($database, $getWardsQuery);
-                                            while($wards = mysqli_fetch_array($getWardResults)){
-                                                $getRoomsQuery = "SELECT roomType, num_beds FROM room WHERE wardID = '$wards[0]'";
-                                                $getRoomsResults = mysqli_query($database, $getRoomsQuery); ?>
-                                                
-                                                <tr data-widget="expandable-table" aria-expanded="true">
-                                                    <td>
-                                                        <i class="expandable-table-caret fas fa-caret-right fa-fw"></i>
-                                                        <?php echo $wards[1]; ?>
-                                                    </td>
-                                                </tr>
-                                                <tr class="expandable-body">
-                                                    <td>
-                                                        <div class="p-0">
-                                                            <table class="table table-hover">
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>Room Type</td>
-                                                                        <td>Number of Avalible Rooms</td>
-                                                                    </tr>
-                                                                    <?php while($rooms = mysqli_fetch_array($getRoomsResults)) { ?>
-                                                                        <script> console.log('<?php echo $rooms[0];?>'); </script>
-                                                                        
-                                                                        <tr data-widget="expandable-table" aria-expanded="false">
-                                                                            <td><?php echo $rooms[0] ?></td>
-                                                                            <td><?php echo $rooms[1] ?></td>
-                                                                        </tr>
-                                                                        <tr class="expandable-body">
-                                                                            <td>
-                                                                            <div class="p-0">
-                                                                                <table class="table table-hover">
-                                                                                <tbody>
-                                                                                    <tr>
-                                                                                        <td><?php echo $rooms[0] ?></td>
-                                                                                        <td><?php echo $rooms[1] ?></td>
-                                                                                    </tr>
-                                                                                </tbody>
-                                                                                </table>
-                                                                            </div>
-                                                                            </td>
-                                                                        </tr>
-                                                                    <?php } ?>
-                                                                </tbody>
-                                                            </table>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                $getWardsQuery = "SELECT ward_id, ward_name FROM ward";
+                                                $getWardResults = mysqli_query($database, $getWardsQuery);
+                                                while($wards = mysqli_fetch_array($getWardResults)){
+                                                    $getRoomsQuery = "SELECT roomType, num_beds FROM room WHERE wardID = '$wards[0]'";
+                                                    $getRoomsResults = mysqli_query($database, $getRoomsQuery); ?>
+                                                    
+                                                    <tr data-widget="expandable-table" aria-expanded="true">
+                                                        <td>
+                                                            <i class="expandable-table-caret fas fa-caret-right fa-fw"></i>
+                                                            <?php echo $wards[1]; ?>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="expandable-body">
+                                                        <td>
+                                                            <div class="p-0">
+                                                                <table class="table table-hover">
+                                                                    <tbody>
+                                                                        <?php while($rooms = mysqli_fetch_array($getRoomsResults)) { 
+                                                                            if (isset($rooms)) {?>                                                                                
+                                                                                <tr data-widget="expandable-table">
+                                                                                    <td><?php echo $rooms[0] ?></td>
+                                                                                    <td><?php echo $rooms[1] ?></td>
+                                                                                </tr>
+                                                                        <?php }} ?>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
                                             <?php } ?>
-                                        
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                            <!-- /.card-body -->
-                            </div>
-                            <!-- /.card -->
                         </div>
                     </div>
                 </div>
