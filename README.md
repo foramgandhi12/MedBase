@@ -1,8 +1,8 @@
 # MedBase
-## How to intall Medbase?
-### How to make the database?
-#### Create new database called `medbase`
-#### Department table query:
+## How To Install MedBase?
+### How To Make The Database?
+#### Create New Database Called `medbase`
+#### Department Table Query:
 ```r
 CREATE TABLE `departments` (
   `departmentID` int(11) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE `departments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
-#### Employee table query:
+#### Employee Table Query:
 ```r
 CREATE TABLE `employee` (
   `employeeID` int(11) NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE `employee` (
 
 ```
 
-#### Ward table query:
+#### Ward Table Query:
 ```r
 CREATE TABLE `ward` (
   `ward_id` int NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE `ward` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
-#### Room table query:
+#### Room Table Query:
 ```r
 CREATE TABLE `room` (
   `roomID` int NOT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE `room` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
-#### Patient table query:
+#### Patient Table Query:
 ```r
 CREATE TABLE `patients` (
   `patientID` int(11) NOT NULL,
@@ -89,7 +89,7 @@ CREATE TABLE `patients` (
 
 ```
 
-#### Medical Records table query:
+#### Medical Records Table Query:
 ```r
 CREATE TABLE `medical_records` (
   `recordID` int(11) NOT NULL,
@@ -112,7 +112,7 @@ CREATE TABLE `medical_records` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
 
-#### Reserve Room table query:
+#### Reserve Room Table Query:
 ```r
 CREATE TABLE `reserveroom` (
  `reservationID` int(11) NOT NULL AUTO_INCREMENT,
@@ -131,7 +131,7 @@ CREATE TABLE `reserveroom` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 ```
 
-#### Assign Doctor table query:
+#### Assign Doctor Table Query:
 ```r
 CREATE TABLE `assigneddoctors` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
@@ -144,13 +144,44 @@ CREATE TABLE `assigneddoctors` (
   CONSTRAINT `assigneddoctors_ibfk_2` FOREIGN KEY (`doctorID`) REFERENCES `employee` (`employeeID`) 
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 ```
-### How clone the repository?
-#### Run command to clone repo: 
+### How To Clone The Repository?
+
+#### Run Command To Clone Repo And Place The Repo In `wamp64\www` Folder: 
 ```r 
 git clone https://github.com/foramgandhi12/MedBase.git
 ```
-## How to execute Medbase?
-### Login as Administrator
-### Login as Doctor
-### Login as Nurse
-### Login as Receptionist
+## How To Execute MedBase?
+Open the MedBase application by running localhost on your chosen browser through wamp64. Use the following URL in your browser: `http://localhost/MedBase/Login.html`
+Upon clicking on the link you will be directed to the login page where you may be able to log in as an Administrator, Nurse, Doctor, or Receptionist.
+
+Note: To add employees to the database, login as an administrator first and add the employee depending on their role (Doctor - 1, Nurse - 2, Receptionist - 3)
+### Login As Administrator
+Username: `Admin`
+Password: `Admin`
+
+#### Add doctor:
+![Add Doctor](https://github.com/foramgandhi12/MedBase/blob/main/public/img/README%20imges/AdminDoctorAdd.png)
+#### Add nurse:
+![Add Nurse](https://github.com/foramgandhi12/MedBase/blob/main/public/img/README%20imges/AdminNurseAdd.png)
+#### Add receptionist:
+![Add Receptionist](https://github.com/foramgandhi12/MedBase/blob/main/public/img/README%20imges/AdminReceptionistAdd.png)
+#### Add employee form:
+![Add Employee Form](https://github.com/foramgandhi12/MedBase/blob/main/public/img/README%20imges/AdminAddEmployeeForm.png)
+
+### Login As Doctor
+Username: `FirstName LastName`
+Password: `{Password}`
+
+![Doctor Dashboard](https://github.com/foramgandhi12/MedBase/blob/main/public/img/README%20imges/DoctorDashboard.png)
+
+### Login As Nurse
+Username: `FirstName LastName`
+Password: `{Password}`
+
+![Nurse Dashbaord](https://github.com/foramgandhi12/MedBase/blob/main/public/img/README%20imges/NurseDashboard.png)
+
+### Login As Receptionist
+Username: `FirstName LastName`
+Password: `{Password}`
+
+![Nurse Dashbaord](https://github.com/foramgandhi12/MedBase/blob/main/public/img/README%20imges/ReceptionistDashboard.png)
