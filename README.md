@@ -144,7 +144,11 @@ CREATE TABLE `assigneddoctors` (
   CONSTRAINT `assigneddoctors_ibfk_2` FOREIGN KEY (`doctorID`) REFERENCES `employee` (`employeeID`) 
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 ```
-### How cole the repository?
+### How clone the repository?
+#### Run command to clone repo: 
+```r 
+git clone https://github.com/foramgandhi12/MedBase.git
+```
 ## How to execute Medbase?
 ### Login as Administrator
 ### Login as Doctor
