@@ -1,4 +1,7 @@
 # MedBase
+
+MedBase is a hospital management system designed to provide hospital staff with a simple and efficient way to organize patient data. It issues top management with a single point of control. The application consists of Doctors, Nurses and Receptionists as employees and an Administrator that is capable of adding employees to the system as well as retrieving all information of the employees from the database. MedBase also has a simplified and comprehensive user interface for daily user needs. This consists of easy-to-use dashboards, secure login and access to patient information as needed.
+
 ## How To Install MedBase?
 ### How To Make The Database?
 #### Create New Database Called `medbase`
